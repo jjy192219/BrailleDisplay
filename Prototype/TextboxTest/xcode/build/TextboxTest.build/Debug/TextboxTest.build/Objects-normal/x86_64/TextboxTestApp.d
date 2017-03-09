@@ -466,4 +466,5 @@ dependencies: \
   /Users/EricJiang/Documents/Developer/Cinder/blocks/poScene/src/poScene/poEvents.h \
   /Users/EricJiang/Documents/Developer/Cinder/blocks/poScene/src/poScene/poScene.h \
   /Users/EricJiang/Documents/Developer/Cinder/blocks/poScene/src/poScene/poEventCenter.h \
-  /Users/EricJiang/Documents/Developer/Cinder/blocks/poScene/src/poScene/poTextBox.h
+  /Users/EricJiang/Documents/Developer/Cinder/blocks/poScene/src/poScene/poTextBox.h \
+  ../../../../../../Developer/Cinder/include/cinder/Serial.h

@@ -4,6 +4,8 @@
 #include "poNodeContainer.h"
 #include "poScene.h"
 #include "poTextBox.h"
+#include "cinder/Serial.h"
+
 
 
 
@@ -26,13 +28,15 @@ class TextboxTestApp : public App {
     string      mStartString;
     string      mFileString;
     bool        bStartTyping;
+    bool        bSending;
+    SerialRef   mSerial;
+    uint8_t     mSignal;
 };
 
 void TextboxTestApp::setup()
 {
     mHolder = po::scene::NodeContainer::create();
     mScene = Scene::create(mHolder);
-    
     mString = "";
     mFileString = "";
     mStartString = "type something";
@@ -47,6 +51,22 @@ void TextboxTestApp::setup()
     mTextBox->setPosition(getWindowSize().x * 0.35f, getWindowSize().y * 0.35f);
     mCiTextBox.size(mTextBox->getPosition().x+100, 200);
     mTextBox->setDrawBounds(true);
+    bSending = false;
+    
+    
+    for( const auto &dev : Serial::getDevices() )
+        console() << "Device: " << dev.getName() << endl;
+    
+    try {
+        Serial::Device dev = Serial::findDeviceByNameContains( "cu.usbmodem1431" );
+        mSerial = Serial::create( dev, 9600 );
+    }
+    catch( SerialExc &exc ) {
+        ci::app::console()<<"can not initialize the device. "<<std::endl;
+        exit( -1 );
+    }
+    
+    mSerial->flush();
 }
 
 void TextboxTestApp::update()
@@ -55,6 +75,7 @@ void TextboxTestApp::update()
         mCiTextBox.text(mString);
         mTextBox->setCiTextBox(mCiTextBox);
     }
+    
     mScene->update();
 }
 
@@ -71,6 +92,9 @@ void TextboxTestApp::keyDown(KeyEvent event){
     
     if (event.getCode() == KeyEvent::KEY_RETURN) {
         cout<<"sending: "<<mFileString<<std::endl;
+        mSerial->writeString(mFileString);
+        bSending= true;
+        //mSignal = *reinterpret_cast<const uint8_t*>(mFileString.data());
         mFileString = "";
         cout<<"mfileString now: "<<mFileString<<std::endl;
     }
