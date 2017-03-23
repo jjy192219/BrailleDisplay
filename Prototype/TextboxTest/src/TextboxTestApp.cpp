@@ -71,36 +71,31 @@ void TextboxTestApp::setup()
 
 void TextboxTestApp::update()
 {
-    if (bStartTyping) {
-        mCiTextBox.text(mString);
-        mTextBox->setCiTextBox(mCiTextBox);
-    }
     
     mScene->update();
 }
 
 void TextboxTestApp::keyDown(KeyEvent event){
-    if (event.getChar()) {
+    if (event.getCode() == KeyEvent::KEY_BACKSPACE ){
+        if (mFileString.size()>0) {
+            mString = mString.substr(0, mString.size()-1);
+            mFileString = mFileString.substr(0, mFileString.size()-1);
+        }
+    }else {
         bStartTyping = true;
-        mString.append(1, event.getChar());
-        mFileString.append(1,event.getChar());
-    }
-    
-    if (event.getCode() == KeyEvent::KEY_UP && !mString.empty()){
-        mString.erase(mString.end()-1);
+        const char character = event.getChar();
+        mString += string( &character, 1 );
+        mFileString += string( &character, 1 );
     }
     
     if (event.getCode() == KeyEvent::KEY_RETURN) {
         cout<<"sending: "<<mFileString<<std::endl;
         mSerial->writeString(mFileString);
         bSending= true;
-        //mSignal = *reinterpret_cast<const uint8_t*>(mFileString.data());
         mFileString = "";
-        cout<<"mfileString now: "<<mFileString<<std::endl;
     }
-
-    
-    
+    mCiTextBox.text(mString);
+    mTextBox->setCiTextBox(mCiTextBox);
     
 }
 
