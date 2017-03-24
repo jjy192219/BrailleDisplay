@@ -3,6 +3,6 @@
 	url = https://github.com/cinder/Cinder.git
 	branch = release_v0.9.0
 [submodule "Cinder-poScene"]
-	path = Blocks
+	path = Blocks/Cinder-poScene
 	url = https://github.com/Potion/Cinder-poScene.git
 	branch = develop
