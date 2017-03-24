@@ -1,0 +1,4 @@
+[submodule "Cinder"]
+	path = Cinder
+	url = https://github.com/cinder/Cinder.git
+	branch = release_v0.9.0

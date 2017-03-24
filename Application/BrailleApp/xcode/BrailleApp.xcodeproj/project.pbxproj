@@ -1,0 +1,427 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		006D720419952D00008149E2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 006D720219952D00008149E2 /* AVFoundation.framework */; };
+		006D720519952D00008149E2 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 006D720319952D00008149E2 /* CoreMedia.framework */; };
+		0091D8F90E81B9330029341E /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0091D8F80E81B9330029341E /* OpenGL.framework */; };
+		00B784B30FF439BC000DE1D7 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784AF0FF439BC000DE1D7 /* Accelerate.framework */; };
+		00B784B40FF439BC000DE1D7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B00FF439BC000DE1D7 /* AudioToolbox.framework */; };
+		00B784B50FF439BC000DE1D7 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B10FF439BC000DE1D7 /* AudioUnit.framework */; };
+		00B784B60FF439BC000DE1D7 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B20FF439BC000DE1D7 /* CoreAudio.framework */; };
+		00B9955A1B128DF400A5C623 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B995581B128DF400A5C623 /* IOKit.framework */; };
+		00B9955B1B128DF400A5C623 /* IOSurface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B995591B128DF400A5C623 /* IOSurface.framework */; };
+		08990E946D0F4615B5964C1F /* BrailleAppApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 288A0CF6A22F4CB0B939B064 /* BrailleAppApp.cpp */; };
+		25263274E8F34AE0AF620711 /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = D263BC5B93D74E1DA418E0FD /* CinderApp.icns */; };
+		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		E928025F1E849E9F0073C0AE /* poEventCenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E928024B1E849E9F0073C0AE /* poEventCenter.cpp */; };
+		E92802601E849E9F0073C0AE /* poEvents.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E928024D1E849E9F0073C0AE /* poEvents.cpp */; };
+		E92802611E849E9F0073C0AE /* poImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E928024F1E849E9F0073C0AE /* poImage.cpp */; };
+		E92802621E849E9F0073C0AE /* poMatrixSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92802511E849E9F0073C0AE /* poMatrixSet.cpp */; };
+		E92802631E849E9F0073C0AE /* poNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92802531E849E9F0073C0AE /* poNode.cpp */; };
+		E92802641E849E9F0073C0AE /* poNodeContainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92802551E849E9F0073C0AE /* poNodeContainer.cpp */; };
+		E92802651E849E9F0073C0AE /* poScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92802571E849E9F0073C0AE /* poScene.cpp */; };
+		E92802661E849E9F0073C0AE /* poShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92802591E849E9F0073C0AE /* poShape.cpp */; };
+		E92802671E849E9F0073C0AE /* poTextBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E928025B1E849E9F0073C0AE /* poTextBox.cpp */; };
+		E928026A1E849EE70073C0AE /* TextInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92802681E849EE70073C0AE /* TextInput.cpp */; };
+		E928026D1E849F090073C0AE /* TextDisplay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E928026B1E849F090073C0AE /* TextDisplay.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		006D720219952D00008149E2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		006D720319952D00008149E2 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		0091D8F80E81B9330029341E /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		00B784AF0FF439BC000DE1D7 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		00B784B00FF439BC000DE1D7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		00B784B10FF439BC000DE1D7 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		00B784B20FF439BC000DE1D7 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		00B995581B128DF400A5C623 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		00B995591B128DF400A5C623 /* IOSurface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOSurface.framework; path = System/Library/Frameworks/IOSurface.framework; sourceTree = SDKROOT; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		288A0CF6A22F4CB0B939B064 /* BrailleAppApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = BrailleAppApp.cpp; path = ../src/BrailleAppApp.cpp; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		5323E6B10EAFCA74003A9687 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
+		5CFECBAE3A1848288EA2D9C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		739D8C6DFB3846EB91ECA8C3 /* BrailleApp_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; path = BrailleApp_Prefix.pch; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* BrailleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrailleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2356091BCF44C1A9F6F1997 /* Resources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Resources.h; path = ../include/Resources.h; sourceTree = "<group>"; };
+		D263BC5B93D74E1DA418E0FD /* CinderApp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = CinderApp.icns; path = ../resources/CinderApp.icns; sourceTree = "<group>"; };
+		E928024B1E849E9F0073C0AE /* poEventCenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = poEventCenter.cpp; path = "../../../Blocks/Cinder-poScene/src/poScene/poEventCenter.cpp"; sourceTree = "<group>"; };
+		E928024C1E849E9F0073C0AE /* poEventCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = poEventCenter.h; path = "../../../Blocks/Cinder-poScene/src/poScene/poEventCenter.h"; sourceTree = "<group>"; };
+		E928024D1E849E9F0073C0AE /* poEvents.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = poEvents.cpp; path = "../../../Blocks/Cinder-poScene/src/poScene/poEvents.cpp"; sourceTree = "<group>"; };
+		E928024E1E849E9F0073C0AE /* poEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = poEvents.h; path = "../../../Blocks/Cinder-poScene/src/poScene/poEvents.h"; sourceTree = "<group>"; };
+		E928024F1E849E9F0073C0AE /* poImage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = poImage.cpp; path = "../../../Blocks/Cinder-poScene/src/poScene/poImage.cpp"; sourceTree = "<group>"; };
+		E92802501E849E9F0073C0AE /* poImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = poImage.h; path = "../../../Blocks/Cinder-poScene/src/poScene/poImage.h"; sourceTree = "<group>"; };
+		E92802511E849E9F0073C0AE /* poMatrixSet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = poMatrixSet.cpp; path = "../../../Blocks/Cinder-poScene/src/poScene/poMatrixSet.cpp"; sourceTree = "<group>"; };
+		E92802521E849E9F0073C0AE /* poMatrixSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = poMatrixSet.h; path = "../../../Blocks/Cinder-poScene/src/poScene/poMatrixSet.h"; sourceTree = "<group>"; };
+		E92802531E849E9F0073C0AE /* poNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = poNode.cpp; path = "../../../Blocks/Cinder-poScene/src/poScene/poNode.cpp"; sourceTree = "<group>"; };
+		E92802541E849E9F0073C0AE /* poNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = poNode.h; path = "../../../Blocks/Cinder-poScene/src/poScene/poNode.h"; sourceTree = "<group>"; };
+		E92802551E849E9F0073C0AE /* poNodeContainer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = poNodeContainer.cpp; path = "../../../Blocks/Cinder-poScene/src/poScene/poNodeContainer.cpp"; sourceTree = "<group>"; };
+		E92802561E849E9F0073C0AE /* poNodeContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = poNodeContainer.h; path = "../../../Blocks/Cinder-poScene/src/poScene/poNodeContainer.h"; sourceTree = "<group>"; };
+		E92802571E849E9F0073C0AE /* poScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = poScene.cpp; path = "../../../Blocks/Cinder-poScene/src/poScene/poScene.cpp"; sourceTree = "<group>"; };
+		E92802581E849E9F0073C0AE /* poScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = poScene.h; path = "../../../Blocks/Cinder-poScene/src/poScene/poScene.h"; sourceTree = "<group>"; };
+		E92802591E849E9F0073C0AE /* poShape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = poShape.cpp; path = "../../../Blocks/Cinder-poScene/src/poScene/poShape.cpp"; sourceTree = "<group>"; };
+		E928025A1E849E9F0073C0AE /* poShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = poShape.h; path = "../../../Blocks/Cinder-poScene/src/poScene/poShape.h"; sourceTree = "<group>"; };
+		E928025B1E849E9F0073C0AE /* poTextBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = poTextBox.cpp; path = "../../../Blocks/Cinder-poScene/src/poScene/poTextBox.cpp"; sourceTree = "<group>"; };
+		E928025C1E849E9F0073C0AE /* poTextBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = poTextBox.h; path = "../../../Blocks/Cinder-poScene/src/poScene/poTextBox.h"; sourceTree = "<group>"; };
+		E928025D1E849E9F0073C0AE /* poTextureFit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = poTextureFit.h; path = "../../../Blocks/Cinder-poScene/src/poScene/poTextureFit.h"; sourceTree = "<group>"; };
+		E928025E1E849E9F0073C0AE /* poVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = poVideo.h; path = "../../../Blocks/Cinder-poScene/src/poScene/poVideo.h"; sourceTree = "<group>"; };
+		E92802681E849EE70073C0AE /* TextInput.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TextInput.cpp; path = ../../../Srcs/TextInput.cpp; sourceTree = "<group>"; };
+		E92802691E849EE70073C0AE /* TextInput.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = TextInput.hpp; path = ../../../Srcs/TextInput.hpp; sourceTree = "<group>"; };
+		E928026B1E849F090073C0AE /* TextDisplay.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TextDisplay.cpp; path = ../../../Srcs/TextDisplay.cpp; sourceTree = "<group>"; };
+		E928026C1E849F090073C0AE /* TextDisplay.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = TextDisplay.hpp; path = ../../../Srcs/TextDisplay.hpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				006D720419952D00008149E2 /* AVFoundation.framework in Frameworks */,
+				006D720519952D00008149E2 /* CoreMedia.framework in Frameworks */,
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				0091D8F90E81B9330029341E /* OpenGL.framework in Frameworks */,
+				5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */,
+				00B784B30FF439BC000DE1D7 /* Accelerate.framework in Frameworks */,
+				00B784B40FF439BC000DE1D7 /* AudioToolbox.framework in Frameworks */,
+				00B784B50FF439BC000DE1D7 /* AudioUnit.framework in Frameworks */,
+				00B784B60FF439BC000DE1D7 /* CoreAudio.framework in Frameworks */,
+				00B9955A1B128DF400A5C623 /* IOKit.framework in Frameworks */,
+				00B9955B1B128DF400A5C623 /* IOSurface.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01B97315FEAEA392516A2CEA /* Blocks */ = {
+			isa = PBXGroup;
+			children = (
+				E92802491E849E810073C0AE /* poScene */,
+			);
+			name = Blocks;
+			sourceTree = "<group>";
+		};
+		080E96DDFE201D6D7F000001 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				288A0CF6A22F4CB0B939B064 /* BrailleAppApp.cpp */,
+				E92802681E849EE70073C0AE /* TextInput.cpp */,
+				E92802691E849EE70073C0AE /* TextInput.hpp */,
+				E928026B1E849F090073C0AE /* TextDisplay.cpp */,
+				E928026C1E849F090073C0AE /* TextDisplay.hpp */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				006D720219952D00008149E2 /* AVFoundation.framework */,
+				006D720319952D00008149E2 /* CoreMedia.framework */,
+				00B784AF0FF439BC000DE1D7 /* Accelerate.framework */,
+				00B784B00FF439BC000DE1D7 /* AudioToolbox.framework */,
+				00B784B10FF439BC000DE1D7 /* AudioUnit.framework */,
+				00B784B20FF439BC000DE1D7 /* CoreAudio.framework */,
+				5323E6B10EAFCA74003A9687 /* CoreVideo.framework */,
+				0091D8F80E81B9330029341E /* OpenGL.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				00B995581B128DF400A5C623 /* IOKit.framework */,
+				00B995591B128DF400A5C623 /* IOSurface.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* BrailleApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* BrailleApp */ = {
+			isa = PBXGroup;
+			children = (
+				01B97315FEAEA392516A2CEA /* Blocks */,
+				29B97315FDCFA39411CA2CEA /* Headers */,
+				080E96DDFE201D6D7F000001 /* Source */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = BrailleApp;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				C2356091BCF44C1A9F6F1997 /* Resources.h */,
+				739D8C6DFB3846EB91ECA8C3 /* BrailleApp_Prefix.pch */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D263BC5B93D74E1DA418E0FD /* CinderApp.icns */,
+				5CFECBAE3A1848288EA2D9C8 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E92802491E849E810073C0AE /* poScene */ = {
+			isa = PBXGroup;
+			children = (
+				E928024A1E849E890073C0AE /* src */,
+			);
+			name = poScene;
+			sourceTree = "<group>";
+		};
+		E928024A1E849E890073C0AE /* src */ = {
+			isa = PBXGroup;
+			children = (
+				E928024B1E849E9F0073C0AE /* poEventCenter.cpp */,
+				E928024C1E849E9F0073C0AE /* poEventCenter.h */,
+				E928024D1E849E9F0073C0AE /* poEvents.cpp */,
+				E928024E1E849E9F0073C0AE /* poEvents.h */,
+				E928024F1E849E9F0073C0AE /* poImage.cpp */,
+				E92802501E849E9F0073C0AE /* poImage.h */,
+				E92802511E849E9F0073C0AE /* poMatrixSet.cpp */,
+				E92802521E849E9F0073C0AE /* poMatrixSet.h */,
+				E92802531E849E9F0073C0AE /* poNode.cpp */,
+				E92802541E849E9F0073C0AE /* poNode.h */,
+				E92802551E849E9F0073C0AE /* poNodeContainer.cpp */,
+				E92802561E849E9F0073C0AE /* poNodeContainer.h */,
+				E92802571E849E9F0073C0AE /* poScene.cpp */,
+				E92802581E849E9F0073C0AE /* poScene.h */,
+				E92802591E849E9F0073C0AE /* poShape.cpp */,
+				E928025A1E849E9F0073C0AE /* poShape.h */,
+				E928025B1E849E9F0073C0AE /* poTextBox.cpp */,
+				E928025C1E849E9F0073C0AE /* poTextBox.h */,
+				E928025D1E849E9F0073C0AE /* poTextureFit.h */,
+				E928025E1E849E9F0073C0AE /* poVideo.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* BrailleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "BrailleApp" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BrailleApp;
+			productInstallPath = "$(HOME)/Applications";
+			productName = BrailleApp;
+			productReference = 8D1107320486CEB800E47090 /* BrailleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "BrailleApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* BrailleApp */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* BrailleApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25263274E8F34AE0AF620711 /* CinderApp.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E928025F1E849E9F0073C0AE /* poEventCenter.cpp in Sources */,
+				E92802651E849E9F0073C0AE /* poScene.cpp in Sources */,
+				E92802621E849E9F0073C0AE /* poMatrixSet.cpp in Sources */,
+				E928026A1E849EE70073C0AE /* TextInput.cpp in Sources */,
+				E92802631E849E9F0073C0AE /* poNode.cpp in Sources */,
+				08990E946D0F4615B5964C1F /* BrailleAppApp.cpp in Sources */,
+				E92802671E849E9F0073C0AE /* poTextBox.cpp in Sources */,
+				E92802611E849E9F0073C0AE /* poImage.cpp in Sources */,
+				E92802661E849E9F0073C0AE /* poShape.cpp in Sources */,
+				E92802601E849E9F0073C0AE /* poEvents.cpp in Sources */,
+				E92802641E849E9F0073C0AE /* poNodeContainer.cpp in Sources */,
+				E928026D1E849F090073C0AE /* TextDisplay.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = BrailleApp_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = "\"$(CINDER_PATH)/lib/libcinder_d.a\"";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.libcinder.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = BrailleApp;
+				SYMROOT = ./build;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_FAST_MATH = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = BrailleApp_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"NDEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = "\"$(CINDER_PATH)/lib/libcinder.a\"";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.libcinder.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = BrailleApp;
+				STRIP_INSTALLED_PRODUCT = YES;
+				SYMROOT = ./build;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CINDER_PATH = ../../../Cinder;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
+				CLANG_CXX_LIBRARY = "libc++";
+				ENABLE_TESTABILITY = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\" ../include";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CINDER_PATH = ../../../Cinder;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
+				CLANG_CXX_LIBRARY = "libc++";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\" ../include";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "BrailleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "BrailleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

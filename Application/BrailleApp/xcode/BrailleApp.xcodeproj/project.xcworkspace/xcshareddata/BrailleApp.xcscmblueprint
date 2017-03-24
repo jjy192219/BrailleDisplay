@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "25ED2CC6298D5A5D0890B00094A462A2F69BBC9D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "5512B2398E14EB5C755207FEFA9FA09ACEA57483" : 9223372036854775807,
+    "25ED2CC6298D5A5D0890B00094A462A2F69BBC9D" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "33B21160-BCA9-4DBD-A862-86AF7B02F155",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "5512B2398E14EB5C755207FEFA9FA09ACEA57483" : "BrailleDisplay\/Blocks\/Cinder-poScene\/",
+    "25ED2CC6298D5A5D0890B00094A462A2F69BBC9D" : "BrailleDisplay\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "BrailleApp",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Application\/BrailleApp\/xcode\/BrailleApp.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:jjy192219\/BrailleDisplay.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "25ED2CC6298D5A5D0890B00094A462A2F69BBC9D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Potion\/Cinder-poScene.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5512B2398E14EB5C755207FEFA9FA09ACEA57483"
+    }
+  ]
+}
