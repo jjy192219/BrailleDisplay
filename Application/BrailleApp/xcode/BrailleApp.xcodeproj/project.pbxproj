@@ -74,7 +74,7 @@
 		E928025D1E849E9F0073C0AE /* poTextureFit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = poTextureFit.h; path = "../../../Blocks/Cinder-poScene/src/poScene/poTextureFit.h"; sourceTree = "<group>"; };
 		E928025E1E849E9F0073C0AE /* poVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = poVideo.h; path = "../../../Blocks/Cinder-poScene/src/poScene/poVideo.h"; sourceTree = "<group>"; };
 		E92802681E849EE70073C0AE /* TextInput.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TextInput.cpp; path = ../../../Srcs/TextInput.cpp; sourceTree = "<group>"; };
-		E92802691E849EE70073C0AE /* TextInput.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = TextInput.hpp; path = ../../../Srcs/TextInput.hpp; sourceTree = "<group>"; };
+		E92802691E849EE70073C0AE /* TextInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextInput.h; path = ../../../Srcs/TextInput.h; sourceTree = "<group>"; };
 		E928026B1E849F090073C0AE /* TextDisplay.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TextDisplay.cpp; path = ../../../Srcs/TextDisplay.cpp; sourceTree = "<group>"; };
 		E928026C1E849F090073C0AE /* TextDisplay.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = TextDisplay.hpp; path = ../../../Srcs/TextDisplay.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,7 +114,7 @@
 			children = (
 				288A0CF6A22F4CB0B939B064 /* BrailleAppApp.cpp */,
 				E92802681E849EE70073C0AE /* TextInput.cpp */,
-				E92802691E849EE70073C0AE /* TextInput.hpp */,
+				E92802691E849EE70073C0AE /* TextInput.h */,
 				E928026B1E849F090073C0AE /* TextDisplay.cpp */,
 				E928026C1E849F090073C0AE /* TextDisplay.hpp */,
 			);
