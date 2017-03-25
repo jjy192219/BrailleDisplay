@@ -20,6 +20,7 @@ namespace Braile {
         
         ci::TextBox                 mCiTextBox;
         po::scene::TextBoxRef       mTextBox;
+        po::scene::TextBoxRef       mSubmitButton;
         std::string                 mStringOnScreen;
         std::string                 mBackgoundText;
         std::string                 mStringToArduino;

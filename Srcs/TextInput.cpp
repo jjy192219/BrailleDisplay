@@ -27,10 +27,18 @@ namespace Braile {
         mTextBox = po::scene::TextBox::create(mCiTextBox);
         addChild(mTextBox);
         mTextBox->setAlignment(po::scene::Alignment::CENTER_CENTER);
+        mTextBox->setDrawBounds(true);
+        ci::TextBox submit = ci::TextBox();
+        submit.text("[ Submit ]");
+        submit.font(ci::Font("Arial", 15));
+        submit.color(ci::Color(1, 0,0));
+        mSubmitButton = po::scene::TextBox::create(submit);
+        mSubmitButton->setAlignment(po::scene::Alignment::CENTER_RIGHT);
+        addChild(mSubmitButton);
     }
     
     void TextInput::update(){
-        
+        mSubmitButton->setPosition(mTextBox->getPosition().x +430.f, mTextBox->getHeight()+50);
     }
     
     ci::TextBox &TextInput::getCiTextBox(){
@@ -76,16 +84,8 @@ namespace Braile {
             getTextSubmitSignal().emit(mStringToArduino);
             mStringToArduino = "";
             mStringOnScreen = "";
-            if (mTextBox && mTextBox->hasParent()) {
-                removeChild(mTextBox);
-            }
-            mTextBox.reset();
             mCiTextBox.size(0,0);
             mCiTextBox.text(mBackgoundText);
-            mCiTextBox.color(ci::Color(0.5f, 0.5f, 0.5f));
-            mTextBox = po::scene::TextBox::create(mCiTextBox);
-            addChild(mTextBox);
-            mTextBox->setAlignment(po::scene::Alignment::CENTER_CENTER);
 
         }else{
             mCiTextBox.text(mStringOnScreen);

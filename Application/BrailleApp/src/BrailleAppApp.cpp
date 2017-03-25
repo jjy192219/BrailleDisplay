@@ -30,16 +30,16 @@ private:
 void BrailleAppApp::setup()
 {
 
-    ci::app::setWindowSize(glm::ivec2(1440, 900));
-//    getWindow()->setPos(0, 0);
-//    getWindow()->setBorderless();
-//    getWindow()->spanAllDisplays();
-//    getWindow()->setAlwaysOnTop();
+    getWindow()->setPos(0, 0);
+    getWindow()->setBorderless();
+    getWindow()->spanAllDisplays();
+    getWindow()->setAlwaysOnTop();
+
     mHolder = po::scene::NodeContainer::create();
     mScene = po::scene::Scene::create(mHolder);
     mTextInput = Braile::TextInput::create();
     mTextInput->setDrawBounds(true);
-    mTextInput->setPosition(getWindowSize().x * 0.35f, getWindowSize().y * 0.35f);
+    mTextInput->setPosition(getWindowSize().x * 0.2f, getWindowSize().y * 0.35f);
     mHolder->addChild(mTextInput);
     mTextInput->getTextSubmitSignal().connect(std::bind(&BrailleAppApp::onSubmission,this, std::placeholders::_1));
 }
@@ -81,7 +81,7 @@ void BrailleAppApp::update()
 void BrailleAppApp::draw()
 {
 	gl::clear( Color( 1, 1, 1 ) );
-    ci::gl::drawString( mDisplayText, ci::vec2( 100.f, 100.f ), ci::Color( 0.5f, 0.5f, 0.5f ) );
+    ci::gl::drawString( mDisplayText, ci::vec2( getWindowWidth()*0.65, getWindowHeight()*0.45 ), ci::Color( 0, 0, 0) );
     mScene->draw();
 }
 
