@@ -27,7 +27,7 @@ namespace Braile {
         mTextBox = po::scene::TextBox::create(mCiTextBox);
         addChild(mTextBox);
         mTextBox->setAlignment(po::scene::Alignment::CENTER_CENTER);
-        mTextBox->setDrawBounds(true);
+        mTextBox->setDrawBounds(false);
         ci::TextBox submit = ci::TextBox();
         submit.text("[ Submit ]");
         submit.font(ci::Font("Arial", 15));
