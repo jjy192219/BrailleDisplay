@@ -11,5 +11,6 @@ dependencies: \
   /Users/ericjiang/Documents/Dev/Anyways/BrailleDisplay/Blocks/Cinder-poScene/src/poScene/poMatrixSet.h \
   /Users/ericjiang/Documents/Dev/Anyways/BrailleDisplay/Blocks/Cinder-poScene/src/poScene/poEvents.h \
   /Users/ericjiang/Documents/Dev/Anyways/BrailleDisplay/Blocks/Cinder-poScene/src/poScene/poTextBox.h \
+  /Users/ericjiang/Documents/Dev/Anyways/BrailleDisplay/Srcs/TextDisplay.h \
   /Users/ericjiang/Documents/Dev/Anyways/BrailleDisplay/Blocks/Cinder-poScene/src/poScene/poScene.h \
   /Users/ericjiang/Documents/Dev/Anyways/BrailleDisplay/Blocks/Cinder-poScene/src/poScene/poEventCenter.h

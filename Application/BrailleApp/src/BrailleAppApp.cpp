@@ -2,6 +2,7 @@
 #include "cinder/app/RendererGl.h"
 #include "cinder/gl/gl.h"
 #include "TextInput.h"
+#include "TextDisplay.h"
 #include "poScene.h"
 #include "poNodeContainer.h"
 
@@ -22,6 +23,7 @@ private:
     
     bool                        mIsFullScreen;
     Braile::TextInputRef        mTextInput;
+    Braile::TextDisplayRef      mTextDisplay;
     po::scene::SceneRef         mScene;
     po::scene::NodeContainerRef mHolder;
     string                      mDisplayText;
@@ -42,6 +44,11 @@ void BrailleAppApp::setup()
     mTextInput->setPosition(getWindowSize().x * 0.2f, getWindowSize().y * 0.35f);
     mHolder->addChild(mTextInput);
     mTextInput->getTextSubmitSignal().connect(std::bind(&BrailleAppApp::onSubmission,this, std::placeholders::_1));
+    
+    mTextDisplay = Braile::TextDisplay::create();
+    mTextDisplay->setPosition(glm::ivec2(getWindowWidth()*0.65, getWindowHeight()*0.45 ));
+    mHolder->addChild(mTextDisplay);
+    
 }
 
 void BrailleAppApp::mouseDown( MouseEvent event )
@@ -70,8 +77,7 @@ void BrailleAppApp::keyDown(KeyEvent event){
 }
 
 void BrailleAppApp::onSubmission(string strToSubmit){
-    mDisplayText = strToSubmit;
-
+    mTextDisplay->display(strToSubmit);
 }
 void BrailleAppApp::update()
 {
@@ -81,7 +87,6 @@ void BrailleAppApp::update()
 void BrailleAppApp::draw()
 {
 	gl::clear( Color( 1, 1, 1 ) );
-    ci::gl::drawString( mDisplayText, ci::vec2( getWindowWidth()*0.65, getWindowHeight()*0.45 ), ci::Color( 0, 0, 0) );
     mScene->draw();
 }
 

@@ -76,7 +76,7 @@
 		E92802681E849EE70073C0AE /* TextInput.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TextInput.cpp; path = ../../../Srcs/TextInput.cpp; sourceTree = "<group>"; };
 		E92802691E849EE70073C0AE /* TextInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextInput.h; path = ../../../Srcs/TextInput.h; sourceTree = "<group>"; };
 		E928026B1E849F090073C0AE /* TextDisplay.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TextDisplay.cpp; path = ../../../Srcs/TextDisplay.cpp; sourceTree = "<group>"; };
-		E928026C1E849F090073C0AE /* TextDisplay.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = TextDisplay.hpp; path = ../../../Srcs/TextDisplay.hpp; sourceTree = "<group>"; };
+		E928026C1E849F090073C0AE /* TextDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextDisplay.h; path = ../../../Srcs/TextDisplay.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +116,7 @@
 				E92802681E849EE70073C0AE /* TextInput.cpp */,
 				E92802691E849EE70073C0AE /* TextInput.h */,
 				E928026B1E849F090073C0AE /* TextDisplay.cpp */,
-				E928026C1E849F090073C0AE /* TextDisplay.hpp */,
+				E928026C1E849F090073C0AE /* TextDisplay.h */,
 			);
 			name = Source;
 			sourceTree = "<group>";
