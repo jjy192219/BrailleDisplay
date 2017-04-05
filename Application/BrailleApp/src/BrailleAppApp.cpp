@@ -53,12 +53,16 @@ void BrailleAppApp::setup()
 
 void BrailleAppApp::mouseDown( MouseEvent event )
 {
+    mTextInput->getMousePos(event);
 }
 
 void BrailleAppApp::toggleFullScreen(){
-    mIsFullScreen = !mIsFullScreen;
+//    mIsFullScreen = !mIsFullScreen;
 //    if (mIsFullScreen) {
-//        ci::app::setWindowSize(glm::ivec2(1680, 1050));
+//        getWindow()->setPos(0, 0);
+//        getWindow()->setBorderless();
+//        getWindow()->spanAllDisplays();
+//        getWindow()->setAlwaysOnTop();
 //    }else{
 //        ci::app::setWindowSize(glm::ivec2(1680*0.25f, 1050*0.25f));
 //    }

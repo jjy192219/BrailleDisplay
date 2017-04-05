@@ -29,20 +29,17 @@ namespace Braile {
         mTextBox->setAlignment(po::scene::Alignment::CENTER_CENTER);
         mTextBox->setDrawBounds(false);
         ci::TextBox submit = ci::TextBox();
-        submit.text("[ Submit ]");
+        submit.text("[ Press Shift to submit ]");
         submit.font(ci::Font("Arial", 15));
         submit.color(ci::Color(1, 0,0));
         mSubmitButton = po::scene::TextBox::create(submit);
         mSubmitButton->setAlignment(po::scene::Alignment::CENTER_RIGHT);
+        mSubmitButton->setDrawBounds(true);
         addChild(mSubmitButton);
     }
     
     void TextInput::update(){
         mSubmitButton->setPosition(mTextBox->getPosition().x +430.f, mTextBox->getHeight()+50);
-    }
-    
-    ci::TextBox &TextInput::getCiTextBox(){
-        return mCiTextBox;
     }
     
     void TextInput::getKeys(ci::app::KeyEvent event){
@@ -80,13 +77,7 @@ namespace Braile {
             
         }
         if (event.getCode() == ci::app::KeyEvent::KEY_LSHIFT) {
-            bFullText= false;
-            getTextSubmitSignal().emit(mStringToArduino);
-            mStringToArduino = "";
-            mStringOnScreen = "";
-            mCiTextBox.size(0,0);
-            mCiTextBox.text(mBackgoundText);
-
+            textSubmit();
         }else{
             mCiTextBox.text(mStringOnScreen);
             if (!bFullText) {
@@ -96,6 +87,27 @@ namespace Braile {
             }
         }
         mTextBox->setCiTextBox(mCiTextBox);
-        
+    }
+    
+    void TextInput::getMousePos(ci::app::MouseEvent event){
+        mouseDown(event);
+    }
+    
+    void TextInput::mouseDown(ci::app::MouseEvent event){
+        std::cout<<"moust position"<<event.getPos()<<std::endl;
+        if ((event.getPos().y >= mSubmitButton->getPosition().y )&& (event.getPos().y <= mSubmitButton->getHeight())) {
+            if((event.getPos().x>=mSubmitButton->getPosition().x) && (event.getPos().x<=mSubmitButton->getWidth())){
+                textSubmit();
+            }
+        }
+    }
+    
+    void TextInput::textSubmit(){
+        bFullText= false;
+        getTextSubmitSignal().emit(mStringToArduino);
+        mStringToArduino = "";
+        mStringOnScreen = "";
+        mCiTextBox.size(0,0);
+        mCiTextBox.text(mBackgoundText);
     }
 }

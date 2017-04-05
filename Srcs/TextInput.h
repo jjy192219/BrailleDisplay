@@ -12,11 +12,13 @@ namespace Braile {
         ~TextInput();
         TextSubmitSignal& getTextSubmitSignal(){return mSubmitText;};
         void getKeys(ci::app::KeyEvent event);
-        ci::TextBox &getCiTextBox();
+        void getMousePos(ci::app::MouseEvent);
     private:
         void setup() override;
         void update() override;
         void keyDown(ci::app::KeyEvent event);
+        void mouseDown( ci::app::MouseEvent event );
+        void textSubmit ();
         
         ci::TextBox                 mCiTextBox;
         po::scene::TextBoxRef       mTextBox;
