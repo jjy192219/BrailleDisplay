@@ -20,6 +20,7 @@
 		25263274E8F34AE0AF620711 /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = D263BC5B93D74E1DA418E0FD /* CinderApp.icns */; };
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		E9081EF81ECCD52000625135 /* Serial.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9081EF61ECCD52000625135 /* Serial.cpp */; };
 		E928025F1E849E9F0073C0AE /* poEventCenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E928024B1E849E9F0073C0AE /* poEventCenter.cpp */; };
 		E92802601E849E9F0073C0AE /* poEvents.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E928024D1E849E9F0073C0AE /* poEvents.cpp */; };
 		E92802611E849E9F0073C0AE /* poImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E928024F1E849E9F0073C0AE /* poImage.cpp */; };
@@ -53,6 +54,8 @@
 		8D1107320486CEB800E47090 /* BrailleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrailleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2356091BCF44C1A9F6F1997 /* Resources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Resources.h; path = ../include/Resources.h; sourceTree = "<group>"; };
 		D263BC5B93D74E1DA418E0FD /* CinderApp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = CinderApp.icns; path = ../resources/CinderApp.icns; sourceTree = "<group>"; };
+		E9081EF61ECCD52000625135 /* Serial.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Serial.cpp; path = ../../../Srcs/Serial.cpp; sourceTree = "<group>"; };
+		E9081EF71ECCD52000625135 /* Serial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Serial.h; path = ../../../Srcs/Serial.h; sourceTree = "<group>"; };
 		E928024B1E849E9F0073C0AE /* poEventCenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = poEventCenter.cpp; path = "../../../Blocks/Cinder-poScene/src/poScene/poEventCenter.cpp"; sourceTree = "<group>"; };
 		E928024C1E849E9F0073C0AE /* poEventCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = poEventCenter.h; path = "../../../Blocks/Cinder-poScene/src/poScene/poEventCenter.h"; sourceTree = "<group>"; };
 		E928024D1E849E9F0073C0AE /* poEvents.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = poEvents.cpp; path = "../../../Blocks/Cinder-poScene/src/poScene/poEvents.cpp"; sourceTree = "<group>"; };
@@ -117,6 +120,8 @@
 				E92802691E849EE70073C0AE /* TextInput.h */,
 				E928026B1E849F090073C0AE /* TextDisplay.cpp */,
 				E928026C1E849F090073C0AE /* TextDisplay.h */,
+				E9081EF61ECCD52000625135 /* Serial.cpp */,
+				E9081EF71ECCD52000625135 /* Serial.h */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -305,6 +310,7 @@
 				E92802661E849E9F0073C0AE /* poShape.cpp in Sources */,
 				E92802601E849E9F0073C0AE /* poEvents.cpp in Sources */,
 				E92802641E849E9F0073C0AE /* poNodeContainer.cpp in Sources */,
+				E9081EF81ECCD52000625135 /* Serial.cpp in Sources */,
 				E928026D1E849F090073C0AE /* TextDisplay.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

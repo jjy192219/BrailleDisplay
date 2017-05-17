@@ -58,7 +58,7 @@ void TextboxTestApp::setup()
         console() << "Device: " << dev.getName() << endl;
     
     try {
-        Serial::Device dev = Serial::findDeviceByNameContains( "cu.usbmodem1431" );
+        Serial::Device dev = Serial::findDeviceByNameContains( "cu.usbmodem14" );
         mSerial = Serial::create( dev, 9600 );
     }
     catch( SerialExc &exc ) {

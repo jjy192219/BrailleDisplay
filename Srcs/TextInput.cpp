@@ -34,7 +34,7 @@ namespace Braile {
         submit.color(ci::Color(1, 0,0));
         mSubmitButton = po::scene::TextBox::create(submit);
         mSubmitButton->setAlignment(po::scene::Alignment::CENTER_RIGHT);
-        mSubmitButton->setDrawBounds(true);
+        mSubmitButton->setDrawBounds(false);
         addChild(mSubmitButton);
     }
     
@@ -94,12 +94,12 @@ namespace Braile {
     }
     
     void TextInput::mouseDown(ci::app::MouseEvent event){
-        std::cout<<"moust position"<<event.getPos()<<std::endl;
-        if ((event.getPos().y >= mSubmitButton->getPosition().y )&& (event.getPos().y <= mSubmitButton->getHeight())) {
-            if((event.getPos().x>=mSubmitButton->getPosition().x) && (event.getPos().x<=mSubmitButton->getWidth())){
-                textSubmit();
-            }
-        }
+//        std::cout<<"moust position"<<event.getPos()<<std::endl;
+//        if ((event.getPos().y >= mSubmitButton->getPosition().y )&& (event.getPos().y <= mSubmitButton->getHeight())) {
+//            if((event.getPos().x>=mSubmitButton->getPosition().x) && (event.getPos().x<=mSubmitButton->getWidth())){
+//                textSubmit();
+//            }
+//        }
     }
     
     void TextInput::textSubmit(){
