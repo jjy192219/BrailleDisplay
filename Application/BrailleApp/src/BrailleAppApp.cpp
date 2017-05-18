@@ -5,6 +5,7 @@
 #include "TextDisplay.h"
 #include "poScene.h"
 #include "poNodeContainer.h"
+#include "Serial.h"
 
 using namespace ci;
 using namespace ci::app;
@@ -13,17 +14,16 @@ using namespace std;
 class BrailleAppApp : public App {
   public:
 	void setup() override;
-	void mouseDown( MouseEvent event ) override;
     void keyDown( KeyEvent event ) override;
 	void update() override;
 	void draw() override;
 private:
-    void toggleFullScreen();
     void onSubmission(string strToSubmit);
     
     bool                        mIsFullScreen;
     Braile::TextInputRef        mTextInput;
     Braile::TextDisplayRef      mTextDisplay;
+    Braile::SerialRef           mSerial;
     po::scene::SceneRef         mScene;
     po::scene::NodeContainerRef mHolder;
     string                      mDisplayText;
@@ -49,39 +49,17 @@ void BrailleAppApp::setup()
     mTextDisplay->setPosition(glm::ivec2(getWindowWidth()*0.65, getWindowHeight()*0.45 ));
     mHolder->addChild(mTextDisplay);
     
+    mSerial = Braile::Serial::create();
 }
 
-void BrailleAppApp::mouseDown( MouseEvent event )
-{
-    mTextInput->getMousePos(event);
-}
-
-void BrailleAppApp::toggleFullScreen(){
-//    mIsFullScreen = !mIsFullScreen;
-//    if (mIsFullScreen) {
-//        getWindow()->setPos(0, 0);
-//        getWindow()->setBorderless();
-//        getWindow()->spanAllDisplays();
-//        getWindow()->setAlwaysOnTop();
-//    }else{
-//        ci::app::setWindowSize(glm::ivec2(1680*0.25f, 1050*0.25f));
-//    }
-}
 
 void BrailleAppApp::keyDown(KeyEvent event){
     mTextInput->getKeys(event);
-//    switch (event.getCode()) {
-//        case KeyEvent::KEY_SPACE:
-//            toggleFullScreen();
-//            break;
-//            
-//        default:
-//            break;
-//    }
 }
 
 void BrailleAppApp::onSubmission(string strToSubmit){
     mTextDisplay->display(strToSubmit);
+    mSerial->sendString(strToSubmit);
 }
 void BrailleAppApp::update()
 {

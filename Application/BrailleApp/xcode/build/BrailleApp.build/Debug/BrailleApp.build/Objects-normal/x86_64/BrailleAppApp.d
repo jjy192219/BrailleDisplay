@@ -603,4 +603,6 @@ dependencies: \
   /Users/EricJiang/Documents/Work/Anyways/BrailleDisplay/Blocks/Cinder-poScene/src/poScene/poTextBox.h \
   /Users/EricJiang/Documents/Work/Anyways/BrailleDisplay/Srcs/TextDisplay.h \
   /Users/EricJiang/Documents/Work/Anyways/BrailleDisplay/Blocks/Cinder-poScene/src/poScene/poScene.h \
-  /Users/EricJiang/Documents/Work/Anyways/BrailleDisplay/Blocks/Cinder-poScene/src/poScene/poEventCenter.h
+  /Users/EricJiang/Documents/Work/Anyways/BrailleDisplay/Blocks/Cinder-poScene/src/poScene/poEventCenter.h \
+  /Users/EricJiang/Documents/Work/Anyways/BrailleDisplay/Srcs/Serial.h \
+  ../../../Cinder/include/cinder/Serial.h

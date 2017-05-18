@@ -15,7 +15,10 @@ namespace Braile{
         return ref;
     }
     
+    Serial::~Serial(){};
+    
     void Serial::setup(){
+        
         for( const auto &dev : ci::Serial::getDevices() )
             ci::app::console() << "Device: " << dev.getName() << std::endl;
         
