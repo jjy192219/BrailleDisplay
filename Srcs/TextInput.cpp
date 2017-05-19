@@ -19,27 +19,29 @@ namespace Braile {
     
     void TextInput::setup(){
         mStringOnScreen = "";
-        mBackgoundText = "type somtnhing";
+        mBackgoundText = "Start typing";
         mCiTextBox = ci::TextBox();
         mCiTextBox.text(mBackgoundText);
-        mCiTextBox.font(ci::Font(ci::app::loadAsset("DroidSansMono.ttf"), 20));
-        mCiTextBox.color(ci::Color(0.5f,0.5f,0.5f));
+        mCiTextBox.font(ci::Font(ci::app::loadAsset("DroidSansMono.ttf"), 17));
+        mCiTextBox.color(ci::Color(0.7f,0.7f,0.7f));
+        mCiTextBox.setPremultiplied(true);
         mTextBox = po::scene::TextBox::create(mCiTextBox);
         addChild(mTextBox);
-        mTextBox->setAlignment(po::scene::Alignment::CENTER_CENTER);
+        mTextBox->setAlignment(po::scene::Alignment::TOP_LEFT);
         mTextBox->setDrawBounds(false);
         ci::TextBox submit = ci::TextBox();
-        submit.text("[ Press Shift to submit ]");
-        submit.font(ci::Font(ci::app::loadAsset("DroidSansMono.ttf"), 13));
-        submit.color(ci::Color(1, 0,0));
+        submit.text("PRESS  SHIFT  TO  SUBMIT");
+        submit.font(ci::Font(ci::app::loadAsset("DroidSansMono.ttf"), 15));
+        submit.color(ci::Color(0.7f, 0.7f, 0.7f));
         mSubmitButton = po::scene::TextBox::create(submit);
-        mSubmitButton->setAlignment(po::scene::Alignment::CENTER_RIGHT);
+        mSubmitButton->setAlignment(po::scene::Alignment::TOP_LEFT);
+        mSubmitButton->setPosition(mTextBox->getPosition().x, 160.f);
         mSubmitButton->setDrawBounds(false);
         addChild(mSubmitButton);
+        mSubmitButton->setAlpha(0.f);
     }
     
     void TextInput::update(){
-        mSubmitButton->setPosition(mTextBox->getPosition().x +417.f, mTextBox->getHeight()+30);
     }
     
     void TextInput::getKeys(ci::app::KeyEvent event){
@@ -47,14 +49,14 @@ namespace Braile {
     }
     
     void TextInput::keyDown(ci::app::KeyEvent event){
-        
-        if (mTextBox->getWidth()>=500) {
-            if (mTextBox->getHeight()>=200) {
-                mCiTextBox.size(500, 208);
+        mSubmitButton->setAlpha(1.f);
+        if (mTextBox->getWidth()>= 240) {
+            if (mTextBox->getHeight()>=150) {
                 bFullText = true;
+                mCiTextBox.size(240, 160);
             }else{
                 bFullText= false;
-                mCiTextBox.size(500, mCiTextBox.getSize().y);
+                mCiTextBox.size(240, mCiTextBox.getSize().y);
             }
         }
         
@@ -63,6 +65,7 @@ namespace Braile {
                 if (bFullText) {
                     mCiTextBox.size(0,0);
                     mCiTextBox.text(mStringOnScreen);
+                    mCiTextBox.size(240, mCiTextBox.getSize().y);
                 }
                 mStringOnScreen = mStringOnScreen.substr(0, mStringOnScreen.size()-1);
                 mStringToArduino = mStringToArduino.substr(0, mStringToArduino.size()-1);
@@ -76,32 +79,21 @@ namespace Braile {
             }
             
         }
-        if (event.getCode() == ci::app::KeyEvent::KEY_LSHIFT) {
+        if (event.getCode() == ci::app::KeyEvent::KEY_LSHIFT || event.getCode() == ci::app::KeyEvent::KEY_RSHIFT) {
             textSubmit();
-            mCiTextBox.color(ci::Color(0.5f, 0.5f, 0.5f));
+            mCiTextBox.color(ci::Color(0.7f, 0.7f, 0.7f));
+            mSubmitButton->setAlpha(0.f);
         }else{
             mCiTextBox.text(mStringOnScreen);
             if (!bFullText) {
                 mCiTextBox.color(ci::Color(0.f, 0.f, 0.f));
             }else{
-                mCiTextBox.color(ci::Color(0.5f, 0.5f, 0.5f));
+                mCiTextBox.color(ci::Color(0.7f, 0.7f, 0.7f));
             }
         }
         mTextBox->setCiTextBox(mCiTextBox);
     }
     
-    void TextInput::getMousePos(ci::app::MouseEvent event){
-        mouseDown(event);
-    }
-    
-    void TextInput::mouseDown(ci::app::MouseEvent event){
-//        std::cout<<"moust position"<<event.getPos()<<std::endl;
-//        if ((event.getPos().y >= mSubmitButton->getPosition().y )&& (event.getPos().y <= mSubmitButton->getHeight())) {
-//            if((event.getPos().x>=mSubmitButton->getPosition().x) && (event.getPos().x<=mSubmitButton->getWidth())){
-//                textSubmit();
-//            }
-//        }
-    }
     
     void TextInput::textSubmit(){
         bFullText= false;

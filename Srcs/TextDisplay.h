@@ -17,6 +17,7 @@ namespace Braile {
         
         ci::TextBox                 mCiTextBox;
         po::scene::TextBoxRef       mTextBox;
+        po::scene::TextBoxRef       mPlaySign;
         std::string                 mResult;
 
     };
