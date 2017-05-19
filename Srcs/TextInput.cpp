@@ -30,7 +30,7 @@ namespace Braile {
         mTextBox->setDrawBounds(false);
         ci::TextBox submit = ci::TextBox();
         submit.text("[ Press Shift to submit ]");
-        submit.font(ci::Font(ci::app::loadAsset("DroidSansMono.ttf"), 15));
+        submit.font(ci::Font(ci::app::loadAsset("DroidSansMono.ttf"), 13));
         submit.color(ci::Color(1, 0,0));
         mSubmitButton = po::scene::TextBox::create(submit);
         mSubmitButton->setAlignment(po::scene::Alignment::CENTER_RIGHT);
@@ -39,7 +39,7 @@ namespace Braile {
     }
     
     void TextInput::update(){
-        mSubmitButton->setPosition(mTextBox->getPosition().x +430.f, mTextBox->getHeight()+50);
+        mSubmitButton->setPosition(mTextBox->getPosition().x +417.f, mTextBox->getHeight()+30);
     }
     
     void TextInput::getKeys(ci::app::KeyEvent event){
@@ -50,7 +50,7 @@ namespace Braile {
         
         if (mTextBox->getWidth()>=500) {
             if (mTextBox->getHeight()>=200) {
-                mCiTextBox.size(500, 205);
+                mCiTextBox.size(500, 208);
                 bFullText = true;
             }else{
                 bFullText= false;

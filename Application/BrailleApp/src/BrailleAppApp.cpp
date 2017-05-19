@@ -46,7 +46,7 @@ void BrailleAppApp::setup()
     mTextInput->getTextSubmitSignal().connect(std::bind(&BrailleAppApp::onSubmission,this, std::placeholders::_1));
     
     mTextDisplay = Braile::TextDisplay::create();
-    mTextDisplay->setPosition(glm::ivec2(getWindowWidth()*0.63, getWindowHeight()*0.43 ));
+    mTextDisplay->setPosition(glm::ivec2(getWindowWidth()*0.64, getWindowHeight()*0.40 ));
     mHolder->addChild(mTextDisplay);
     
     mSerial = Braile::Serial::create();

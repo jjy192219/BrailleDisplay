@@ -34,7 +34,7 @@ namespace Braile {
     
     void TextDisplay::display(std::string result){
         mResult = result;
-        mCiTextBox.size(500,205);
+        mCiTextBox.size(500,208);
         mCiTextBox.text(mResult);
         mTextBox->setCiTextBox(mCiTextBox);
     }
