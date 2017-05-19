@@ -164,6 +164,7 @@
 		29B97314FDCFA39411CA2CEA /* BrailleApp */ = {
 			isa = PBXGroup;
 			children = (
+				E96782D61ECF64010002EBD3 /* Assets */,
 				01B97315FEAEA392516A2CEA /* Blocks */,
 				29B97315FDCFA39411CA2CEA /* Headers */,
 				080E96DDFE201D6D7F000001 /* Source */,
@@ -234,6 +235,13 @@
 				E928025E1E849E9F0073C0AE /* poVideo.h */,
 			);
 			name = src;
+			sourceTree = "<group>";
+		};
+		E96782D61ECF64010002EBD3 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

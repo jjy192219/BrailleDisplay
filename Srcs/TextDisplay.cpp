@@ -21,7 +21,7 @@ namespace Braile {
         mResult = "";
         mCiTextBox = ci::TextBox();
         mCiTextBox.text(mResult);
-        mCiTextBox.font(ci::Font("Arial", 20));
+        mCiTextBox.font(ci::Font(ci::app::loadAsset("DroidSansMono.ttf"), 20));
         mCiTextBox.color(ci::Color(0,0,0));
         mTextBox = po::scene::TextBox::create(mCiTextBox);
         addChild(mTextBox);
@@ -34,7 +34,7 @@ namespace Braile {
     
     void TextDisplay::display(std::string result){
         mResult = result;
-        mCiTextBox.size(500,200);
+        mCiTextBox.size(500,205);
         mCiTextBox.text(mResult);
         mTextBox->setCiTextBox(mCiTextBox);
     }

@@ -41,7 +41,7 @@ void BrailleAppApp::setup()
     mScene = po::scene::Scene::create(mHolder);
     mTextInput = Braile::TextInput::create();
     mTextInput->setDrawBounds(false);
-    mTextInput->setPosition(getWindowSize().x * 0.16f, getWindowSize().y * 0.35f);
+    mTextInput->setPosition(getWindowSize().x * 0.165f, getWindowSize().y * 0.39f);
     mHolder->addChild(mTextInput);
     mTextInput->getTextSubmitSignal().connect(std::bind(&BrailleAppApp::onSubmission,this, std::placeholders::_1));
     

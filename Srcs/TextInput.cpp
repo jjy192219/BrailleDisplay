@@ -22,7 +22,7 @@ namespace Braile {
         mBackgoundText = "type somtnhing";
         mCiTextBox = ci::TextBox();
         mCiTextBox.text(mBackgoundText);
-        mCiTextBox.font(ci::Font("Arial", 20));
+        mCiTextBox.font(ci::Font(ci::app::loadAsset("DroidSansMono.ttf"), 20));
         mCiTextBox.color(ci::Color(0.5f,0.5f,0.5f));
         mTextBox = po::scene::TextBox::create(mCiTextBox);
         addChild(mTextBox);
@@ -30,7 +30,7 @@ namespace Braile {
         mTextBox->setDrawBounds(false);
         ci::TextBox submit = ci::TextBox();
         submit.text("[ Press Shift to submit ]");
-        submit.font(ci::Font("Arial", 15));
+        submit.font(ci::Font(ci::app::loadAsset("DroidSansMono.ttf"), 15));
         submit.color(ci::Color(1, 0,0));
         mSubmitButton = po::scene::TextBox::create(submit);
         mSubmitButton->setAlignment(po::scene::Alignment::CENTER_RIGHT);
@@ -50,7 +50,7 @@ namespace Braile {
         
         if (mTextBox->getWidth()>=500) {
             if (mTextBox->getHeight()>=200) {
-                mCiTextBox.size(500, 200);
+                mCiTextBox.size(500, 205);
                 bFullText = true;
             }else{
                 bFullText= false;
@@ -78,6 +78,7 @@ namespace Braile {
         }
         if (event.getCode() == ci::app::KeyEvent::KEY_LSHIFT) {
             textSubmit();
+            mCiTextBox.color(ci::Color(0.5f, 0.5f, 0.5f));
         }else{
             mCiTextBox.text(mStringOnScreen);
             if (!bFullText) {
