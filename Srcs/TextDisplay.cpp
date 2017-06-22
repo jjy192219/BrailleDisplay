@@ -21,7 +21,7 @@ namespace Braile {
         mResult = "";
         mCiTextBox = ci::TextBox();
         mCiTextBox.text(mResult);
-        mCiTextBox.font(ci::Font(ci::app::loadAsset("DroidSansMono.ttf"), 17));
+        mCiTextBox.font(ci::Font(ci::app::loadAsset("DroidSansMono.ttf"), 16));
         mCiTextBox.color(ci::Color(0,0,0));
         mCiTextBox.setPremultiplied(true);
         mTextBox = po::scene::TextBox::create(mCiTextBox);
@@ -48,7 +48,7 @@ namespace Braile {
     void TextDisplay::display(std::string result){
         mResult = result;
         mPlaySign->setAlpha(1.f);
-        mCiTextBox.size(240,160);
+        mCiTextBox.size(240,110);
         mCiTextBox.text(mResult);
         mTextBox->setCiTextBox(mCiTextBox);
     }
